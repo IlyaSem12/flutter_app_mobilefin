@@ -10,6 +10,24 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: _appBar(),
       drawer: drawerHeader(),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(
+          icon: new Icon(Icons.newspaper_outlined),
+          label: "Новости",
+        ),
+        new BottomNavigationBarItem(
+          icon: Icon(Icons.menu_book_rounded),
+          label: "Тренажер",
+        ),
+        new BottomNavigationBarItem(
+          icon: Icon(Icons.science),
+          label: "Учебный курс",
+        ),
+        // new BottomNavigationBarItem(
+        //   icon: Icon(Icons.library_books_rounded),
+        //   label: "Материалы",
+        // )
+      ]),
     );
   }
 
@@ -22,27 +40,6 @@ class HomePage extends StatelessWidget {
         style: TextStyle(
             fontSize: 18, fontWeight: FontWeight.bold, color: Colors.red),
       ),
-      // leading: GestureDetector(
-      //   onTap: () {
-      //     drawer:
-      //     drawerHeader();
-      //   },
-      //   child: Icon(
-      //     Icons.menu,
-      //     color: Colors.red,
-      //   ),
-      // ),
-      actions: <Widget>[
-        IconButton(
-          icon: new Icon(
-            Icons.menu,
-            color: Colors.red,
-          ),
-          onPressed: () {
-            drawerHeader();
-          },
-        )
-      ],
     );
   }
 }
